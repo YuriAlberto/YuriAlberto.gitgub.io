@@ -1,7 +1,7 @@
 ---
- title: "Introducción a redes neuronales."
+ title: "Introducción a las redes neuronales con python."
  layout: "post"
- permalink: "/2017/06/3/introduccion_a_redes_neuronales.html"
+ permalink: "/2017/06/3/introduccion_a_redes_neuronales_con_python.html"
  uuid: "1"
  guid: "tag:blogger.com,1999:blog-8151684071475042498.post-110029272507522038"
  date: "2017-06-03 13:22:00"
@@ -19,7 +19,167 @@
 ---
 <div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-  Aqui va el contenido
+ He decidido aprender “Machine learning” .Para un mejor aprendizaje he decidido ir escribiendo lo aprendido y seleccionar un proyecto por supuesto relacionado con ML (un poco de paciencia para saber de qué se trata….) y así practicar lo aprendido .
+
+Los temas a tratar serán : Estadística descriptiva, probabilidades , estadistica inferencial  y álgebra lineal, en cuanto a herramientas de machine learning se usará : redes neuronales, Máquinas vectores de soporte, K-Means, otros . Para la parte de visualización y contar historias usaremos D3.js. Y el lenguaje de programación a usar será Python.
+
+Iniciemos el camino.
+
+Las redes neuronales son unas de las técnicas más usadas en la inteligencia artificial: sea en machine learning, data science, vision artificial, etc. 
+
+Para un buen provecho se supone que el lector tiene conocimientos básicos de python y logica de programacion y pequeño gusto por no hacer hasta no entender(a veces es perjudicial...jeeje).
+
+Definicion.
+
+Una red neuronal matemáticamente es una función de R en R. Ver figura.
+
+
+Donde n es a una combinación de los pesos sinápticos y  la polarización. Gráficamente podemos representar así : 
+
+
+Una red neuronal queda definida si se conoce los pesos sinápticos , la polarización y el algoritmo de entrenamiento.
+
+Por lo dicho anterior, una red neuronal soluciona dos problemas: Clasificación de clases y aproximación de funciones. Ver figura.
+
+
+
+
+
+Puedes ver unos ejemplos muy vistoso en este link
+
+
+
+
+
+
+Red monocapa.
+
+Es un conjunto de neuronas artificiales conectadas en paralelo. Ver figura.
+
+
+Es claro que tendrán la capacidad de clasificar 2 n clases. Donde n es el número de clases.
+
+
+Red neuronal multicapa.
+
+Es un conjunto de redes monocapas conectadas en series por lo cual se tendrá la siguiente expresión matemática.
+
+
+Gráficamente queda representada de la siguiente manera.
+
+
+Antes de iniciar a usar estas  herramientas, es bueno realizar un pequeño repaso de matematica,algebra lineal y estadística. Creo que sin estos conceptos claros no se hace una compresión buena de esta técnica
+
+
+
+
+
+
+
+
+
+Un pequeño repaso: Álgebra lineal, Matemática y estadística.
+
+Método del descenso del gradiente.
+
+En cálculo numérico tenemos unos de los algoritmos más clásicos para conseguir mínimos en una función el más usado  es El método del descenso por gradiente. Es muy fácil su compresión aqui esta el algoritmo.
+
+
+
+Se sabe por calculo  que una función siempre crece en la dirección del gradiente(en funciones de R a R se habla de la pendiente) aquí se supone que función puede ser muchas variables. Es lógico que si quisieras ubicar no los maximos si no los minimos se tendria que ir en direccion contraria a este,es por esto lo del signo menos en las ecuación. Se realizar saltos, hasta lograr ubicar un mínimo.
+
+
+
+Este método tiene el problema de quedarse apuntando a mínimos locales en vez de mínimos global, la selección de una delta evita al máximo este problema. ver figura 
+
+Error y error cuadrático y error cuadrático medio.
+
+La definición de estos es muy sencilla tenemos
+
+Error: 
+
+error
+
+Error
+
+
+Operaciones con matrices.
+
+Una matriz está definida de la siguiente manera.
+
+Algunas operaciones.
+
+    Suma
+    Multiplicaion
+    Resta
+    Multiplicacion por un escalar
+    Inversar de una matriz
+    matrices diagolanes
+    La matrix identidad
+
+
+Sabemos que los siguiente se sumple
+
+A = A +B
+
+Sea una A un matriz regular entonces sabemos que el det(A) = 0 si esto pasa, hay una y solo una solucion para el sistema de ecuaciones.
+
+Si a es singular, entonces sabemos que infinatas solucionas, la seudoinversa selecciona la solucion mas optima. En Python hay una funcion que permite calcularlo.
+
+
+
+Funciones continuas y derivables.
+
+Aqui esta la definición : 
+
+
+
+Gráficamente se muestra de esta forma.
+
+Separabilidad lineal: 
+
+Si se tiene n clases y estas clases son separadas a través de una recta o hiperplano entonces decimos que hay una separabilidad lineal. Ver figura.
+
+
+Red neuronal artificial : Unidad mínima .
+
+Como se dijo con anterioridad una red neuronal se se de la siguiente manera.
+
+
+
+Su algoritmo de entrenamiento, miremos como podemos acercarnos un poco mas a este.
+
+Demostración matemática.
+
+Miremos un ejemplo en python. En este ejemplo vamos aproximar la funcion AND.
+
+
+Las malas noticias(o buenas): Las red neuronal perceptrón sólo clasifica o aproxima, siempre que exista entre clases una frontera de decisión lineal o esté definida por una recta. Para entender esto miremos el caso del xor.
+
+
+Si se mira la gráfica se observa que no existe una recta que puede separar estas clases, para hacerlo necesitas una curva. Como esta.
+
+
+
+Este problema lo soluciona de forma elegante al perceptrón multicapa. pero esto lo veremos en la siguiente entrada.  
+
+
+
+
+
+
+
+
+
+
+Que viene ahora ?
+
+En el siguiente post escribiré sobre : Estadística descriptiva en Python. 
+
+Y después : Red Neuronal multicapa en Python. 
+
+
+
 ```
   <p style="text-align:center">I have no idea about this equation!</p>
   <h2>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</h2>
