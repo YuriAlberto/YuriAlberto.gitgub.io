@@ -19,6 +19,15 @@
 ---
 <div class="css-full-post-content js-full-post-content">
 <div dir="ltr" style="text-align: left;" trbidi="on">
+ {% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
  He decidido aprender “Machine learning” .Para un mejor aprendizaje he decidido ir escribiendo lo aprendido y seleccionar un proyecto por supuesto relacionado con ML (un poco de paciencia para saber de qué se trata….) y así practicar lo aprendido .
 
 Los temas a tratar serán : Estadística descriptiva, probabilidades , estadistica inferencial  y álgebra lineal, en cuanto a herramientas de machine learning se usará : redes neuronales, Máquinas vectores de soporte, K-Means, otros . Para la parte de visualización y contar historias usaremos D3.js. Y el lenguaje de programación a usar será Python.
