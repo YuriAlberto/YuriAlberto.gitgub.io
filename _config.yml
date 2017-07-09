@@ -1,9 +1,13 @@
 name: Escribiendo para aprender.
 description: >
-    He iniciando con algunos de mis placeres: Modelos matematicos con implemetanción computacional y si se puede generar un poco de dinero..
+    He decidido aprender “Machine learning” .Para un mejor aprendizaje he decidido ir escribiendo lo aprendido y 
+    seleccionar un proyecto por supuesto relacionado con ML (un poco de paciencia para saber de qué se trata….) y 
+    así practicar lo aprendido . Los temas a tratar serán : Estadística descriptiva, probabilidades , estadistica inferencial  
+    y álgebra lineal, en cuanto a herramientas de machine learning se usará : redes neuronales, Máquinas vectores de soporte,
+    K-Means, otros . Para la parte de visualización y contar historias usaremos D3.js. Y el lenguaje de programación a usar será Python.
 about: >
     Soy Yuri Alberto Bermudez nacido en Nuqui-Choco. Desarrollador full stack y estudiante de matematica de
-    la Universidad Nacional Sede Medellin.
+    la Universidad Nacional Sede Medellin. Si tienes algo que contarme, puedes escribirme a bermudezyuriaba[arroba].gmail.com
 
 url: "https://yurialberto.github.io"
 baseurl: "/white-paper"
@@ -20,7 +24,7 @@ disqus_shortname:
 owner:
   name:           yurialberto
   avatar:         ""
-  email:          ""
+  email:          "bermudezyuriaba@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   github:
