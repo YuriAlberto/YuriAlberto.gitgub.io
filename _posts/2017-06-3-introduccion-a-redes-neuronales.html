@@ -31,48 +31,53 @@ Las redes neuronales son unas de las técnicas más usadas en la inteligencia ar
 
 Para un buen provecho se supone que el lector tiene conocimientos básicos de python y logica de programacion y pequeño gusto por no hacer hasta no entender(a veces es perjudicial...jeeje).
  </p>
-<p><ins>Definicion.</ins></p>
+<p><ins>Definición.</ins></p>
 <p>
 Una red neuronal matemáticamente es una función de R en R. Ver figura.
 </p>
 \[
   f\colon\RR\to\RR \hbox{ por } f(n)=< t+1,{1\over 1+t^2}, \sqrt{t^2+1} >
 \]
-Donde n es a una combinación de los pesos sinápticos y  la polarización. Gráficamente podemos representar así : 
-
-
+Donde n es a una combinación de los pesos sinápticos y  la polarización.
+<p> 
+ Gráficamente podemos representar así : 
+</p>
+<p>
 Una red neuronal queda definida si se conoce los pesos sinápticos , la polarización y el algoritmo de entrenamiento.
 
 Por lo dicho anterior, una red neuronal soluciona dos problemas: Clasificación de clases y aproximación de funciones. Ver figura.
+</p>
+
+
+
+<p>
+Puedes ver unos ejemplos muy vistoso en este <a href="http://playground.tensorflow.org">link</a>
+</p>
 
 
 
 
 
-Puedes ver unos ejemplos muy vistoso en este link
-
-
-
-
-
-
-Red monocapa.
-
+<p><ins>Red monocapa.</p></ins>
+<p>
 Es un conjunto de neuronas artificiales conectadas en paralelo. Ver figura.
-
-
+</p>
+<p>
 Es claro que tendrán la capacidad de clasificar 2 n clases. Donde n es el número de clases.
+</p>
 
-
-Red neuronal multicapa.
-
+<p><ins>Red neuronal multicapa.</p></ins>
+<p>
 Es un conjunto de redes monocapas conectadas en series por lo cual se tendrá la siguiente expresión matemática.
-
-
+</p>
+<p>
 Gráficamente queda representada de la siguiente manera.
+</p>
 
-
+ 
+<p> 
 Antes de iniciar a usar estas  herramientas, es bueno realizar un pequeño repaso de matematica,algebra lineal y estadística. Creo que sin estos conceptos claros no se hace una compresión buena de esta técnica
+</p>
 
 
 
@@ -81,23 +86,27 @@ Antes de iniciar a usar estas  herramientas, es bueno realizar un pequeño repas
 
 
 
+ <h3>Un pequeño repaso: Álgebra lineal, Matemática y estadística.</h3>
 
-Un pequeño repaso: Álgebra lineal, Matemática y estadística.
+<p><ins>Método del descenso del gradiente.</p></ins>
+<p>
+En cálculo numérico tenemos unos de los algoritmos más clásicos para conseguir mínimos en una función el más usado 
+ es El método del descenso por gradiente. Es muy fácil su compresión aqui esta el algoritmo.
+</p>
 
-Método del descenso del gradiente.
+<p>
+Se sabe por calculo  que una función siempre crece en la dirección del gradiente(en funciones de R a R se habla de la 
+ pendiente) aquí se supone que función puede ser muchas variables. Es lógico que si quisieras ubicar no los maximos 
+ si no los minimos se tendria que ir en direccion contraria a este,es por esto lo del signo menos en las ecuación. 
+ Se realizar saltos, hasta lograr ubicar un mínimo.
+</p>
 
-En cálculo numérico tenemos unos de los algoritmos más clásicos para conseguir mínimos en una función el más usado  es El método del descenso por gradiente. Es muy fácil su compresión aqui esta el algoritmo.
-
-
-
-Se sabe por calculo  que una función siempre crece en la dirección del gradiente(en funciones de R a R se habla de la pendiente) aquí se supone que función puede ser muchas variables. Es lógico que si quisieras ubicar no los maximos si no los minimos se tendria que ir en direccion contraria a este,es por esto lo del signo menos en las ecuación. Se realizar saltos, hasta lograr ubicar un mínimo.
-
-
-
+<p>
 Este método tiene el problema de quedarse apuntando a mínimos locales en vez de mínimos global, la selección de una delta evita al máximo este problema. ver figura 
+</p>
 
-Error y error cuadrático y error cuadrático medio.
-
+<p><ins>Error y error cuadrático y error cuadrático medio.</p></ins>
+<p>
 La definición de estos es muy sencilla tenemos
 
 Error: 
@@ -106,9 +115,9 @@ error
 
 Error
 
-
-Operaciones con matrices.
-
+</p>
+<p><ins>Operaciones con matrices.</p></ins>
+<p>
 Una matriz está definida de la siguiente manera.
 
 Algunas operaciones.
@@ -121,7 +130,6 @@ Algunas operaciones.
     matrices diagolanes
     La matrix identidad
 
-
 Sabemos que los siguiente se sumple
 
 A = A +B
@@ -129,30 +137,32 @@ A = A +B
 Sea una A un matriz regular entonces sabemos que el det(A) = 0 si esto pasa, hay una y solo una solucion para el sistema de ecuaciones.
 
 Si a es singular, entonces sabemos que infinatas solucionas, la seudoinversa selecciona la solucion mas optima. En Python hay una funcion que permite calcularlo.
+</p>
 
 
-
-Funciones continuas y derivables.
-
+<p><ins>Funciones continuas y derivables.</p></ins>
+<p>
 Aqui esta la definición : 
 
 
 
 Gráficamente se muestra de esta forma.
+</p>
 
-Separabilidad lineal: 
-
+<p><ins>Separabilidad lineal.</p></ins> 
+<p>
 Si se tiene n clases y estas clases son separadas a través de una recta o hiperplano entonces decimos que hay una separabilidad lineal. Ver figura.
+</p>
 
-
-Red neuronal artificial : Unidad mínima .
-
+<h3>Red neuronal artificial : Unidad mínima .</h3>
+<p>
 Como se dijo con anterioridad una red neuronal se se de la siguiente manera.
 
 
 
 Su algoritmo de entrenamiento, miremos como podemos acercarnos un poco mas a este.
-
+</p>
+<p>
 Demostración matemática.
 
 Miremos un ejemplo en python. En este ejemplo vamos aproximar la funcion AND.
@@ -162,7 +172,7 @@ Las malas noticias(o buenas): Las red neuronal perceptrón sólo clasifica o apr
 
 
 Si se mira la gráfica se observa que no existe una recta que puede separar estas clases, para hacerlo necesitas una curva. Como esta.
-
+</p>
 
 
 Este problema lo soluciona de forma elegante al perceptrón multicapa. pero esto lo veremos en la siguiente entrada.  
@@ -176,12 +186,12 @@ Este problema lo soluciona de forma elegante al perceptrón multicapa. pero esto
 
 
 
-Que viene ahora ?
-
+<h3>Que viene ahora ?</h3>
+<p>
 En el siguiente post escribiré sobre : Estadística descriptiva en Python. 
 
 Y después : Red Neuronal multicapa en Python. 
-
+</p>
 
 
 ```
