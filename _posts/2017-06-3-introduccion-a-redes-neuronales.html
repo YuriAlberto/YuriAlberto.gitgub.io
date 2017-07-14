@@ -32,76 +32,8 @@ Las redes neuronales son unas de las técnicas más usadas en la inteligencia ar
 
 Para un buen provecho se supone que el lector tiene conocimientos básicos de python y logica de programacion y pequeño gusto por no hacer hasta no entender(a veces es perjudicial...jeeje).
  </p>
-<p><ins>Definición.</ins></p>
-<p>
  
- 
-
-
- Una red neuronal podemos escribirla como una función de R en R. Ver figura.
-</p>
- \[f\colon\RR\to\RR \hbox{ por } \]
- \[ \hspace{10cm} f(n)= a\in\RR \hspace{1cm} y \hspace{1cm}  n= \sum_{n=1}^R W_{ij}*P_{j}  \]
-<p style="text-align:center;" > 
- Gráficamente podemos representarla de la siguiente manera : <br/>
- <img src="{{site.url}}/imagen/na.png">
-</p>
-<p>
-Una red neuronal queda definida si se conoce los pesos sinápticos , la polarización y el algoritmo de entrenamiento.
-
-Por lo dicho anterior, adicionalmente nos ayuda a resolver dos problemas clasis en la 
-inteligencia artificial: Clasificación de clases y aproximación de funciones. Ver figura.
-</p>
- <p style="text-align:center;" >
- Ejemplo: aproximación de la funcion sen(x)<br/>
- <img  src="https://i.stack.imgur.com/l8qjP.png" />
- </p>
- <p style="text-align:center;" >
-  Ejemplo: Clasificación de clase (implementación de xor).<br/>
-   <img  src="http://www.work.caltech.edu/~htlin/program/libsvm/doc/xor.png" />
-
- </p>
- 
-
-
-
-<p>
-Puedes ver unos ejemplos muy vistoso en este <a href="http://playground.tensorflow.org">link</a>
-</p>
-
-
-
-
-
-<p><ins>Red monocapa.</p></ins>
-<p>
-Es un conjunto de neuronas artificiales conectadas en paralelo. Ver figura.
-</p>
-<p>
-Es claro que tendrán la capacidad de clasificar 2 n clases. Donde n es el número de clases.
-</p>
-
-<p><ins>Red neuronal multicapa.</p></ins>
-<p>
-Es un conjunto de redes monocapas conectadas en series por lo cual se tendrá la siguiente expresión matemática.
-</p>
-<p>
-Gráficamente queda representada de la siguiente manera.
-</p>
-
- 
-<p> 
-Antes de iniciar a usar estas  herramientas, es bueno realizar un pequeño repaso de matematica,algebra lineal y estadística. Creo que sin estos conceptos claros no se hace una compresión buena de esta técnica
-</p>
-
-
-
-
-
-
-
-
- <h3>Un pequeño repaso: Álgebra lineal, Matemática y estadística.</h3>
+  <h3>Un pequeño repaso: Álgebra lineal, Matemática y estadística.</h3>
 
 <p><ins>Método del descenso del gradiente.</p></ins>
 <p>
@@ -168,6 +100,84 @@ Gráficamente se muestra de esta forma.
 <p>
 Si se tiene n clases y estas clases son separadas a través de una recta o hiperplano entonces decimos que hay una separabilidad lineal. Ver figura.
 </p>
+
+<p><ins>Definición.</ins></p>
+<p>
+ 
+ 
+
+
+ Una red neuronal podemos escribirla como una función de R en R. Ver figura.
+</p>
+ \[f\colon\RR\to\RR \hbox{ por } \]
+ \[ \hspace{10cm} f(n)= a\in\RR \hspace{1cm} y \hspace{1cm}  n= \sum_{n=1}^R W_{ij}*P_{j}  \]
+<p style="text-align:center;" > 
+ Gráficamente podemos representarla de la siguiente manera : <br/>
+ <img src="{{site.url}}/imagen/na.png">
+</p>
+<p>
+Una red neuronal queda definida si se conoce los pesos sinápticos , la polarización y el algoritmo de entrenamiento.
+
+Por lo dicho anterior, adicionalmente nos ayuda a resolver dos problemas clasis en la 
+inteligencia artificial: Clasificación de clases y aproximación de funciones. Ver figura.
+</p>
+ <p style="text-align:center;" >
+ Ejemplo: aproximación de la funcion sen(x)<br/>
+ <img  src="https://i.stack.imgur.com/l8qjP.png" />
+ </p>
+ <p style="text-align:center;" >
+  Ejemplo: Clasificación de clase (implementación de xor).<br/>
+   <img  src="http://www.work.caltech.edu/~htlin/program/libsvm/doc/xor.png" />
+
+ </p>
+ 
+
+
+
+<p>
+Puedes ver unos ejemplos muy vistoso en este <a href="http://playground.tensorflow.org">link</a>
+</p>
+
+
+
+
+
+<p><ins>Red monocapa.</p></ins>
+<p>
+Es un conjunto de neuronas artificiales conectadas en paralelo.Es claro que tendrán la capacidad de clasificar 2 n clases. Donde n es el número de clases.
+. Ver figura.
+  <img src="{{site.url}}/imagen/rn_monocapa.png">
+
+</p>
+<p>
+ De forma compacta se puede escribir de esta forma:
+   <img src="{{site.url}}/imagen/rn_monocapa_compacta.png">
+
+</p>
+
+<p><ins>Red neuronal multicapa.</p></ins>
+<p>
+Es un conjunto de redes monocapas conectadas en series por lo cual se tendrá la siguiente expresión matemática.
+</p>
+<p>
+Gráficamente queda representada de la siguiente manera.
+    <img src="{{site.url}}/imagen/rn_multicapa.png">
+
+ 
+</p>
+
+ 
+<p> 
+Antes de iniciar a usar estas  herramientas, es bueno realizar un pequeño repaso de matematica,algebra lineal y estadística. Creo que sin estos conceptos claros no se hace una compresión buena de esta técnica
+</p>
+
+
+
+
+
+
+
+
 
 <h3>Red neuronal artificial : Unidad mínima .</h3>
 <p>
